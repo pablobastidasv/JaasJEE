@@ -52,6 +52,7 @@
 		<web-resource-collection>
 			<web-resource-name>Area de administradores</web-resource-name>
 			<url-pattern>/admin/*</url-pattern>
+			<url-pattern>/rest/admin/*</url-pattern>
 			<http-method>GET</http-method>
 			<http-method>POST</http-method>
 		</web-resource-collection>
@@ -64,11 +65,11 @@
 	</security-constraint>
 
 	<login-config>
-		<auth-method>FORM</auth-method>
+		<auth-method>BASIC</auth-method>
 		<realm-name>jdbc-real</realm-name>
-		<form-login-config>
-			<form-login-page>/login.page</form-login-page>
-			<form-error-page>/loginError.page</form-error-page>
-		</form-login-config>
+		<!--<form-login-config>-->
+		<!--<form-login-page>/login.page</form-login-page>-->
+		<!--<form-error-page>/loginError.page</form-error-page>-->
+		<!--</form-login-config>-->
 	</login-config>
 </web-app>
